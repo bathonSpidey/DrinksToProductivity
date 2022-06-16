@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksToProductivity", "DrinksToProductivity\DrinksToProductivity.csproj", "{BFC2EFD1-AB82-4768-9BA9-E532AA848ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksToProductivity.Tests", "DrinksToProductivity.Tests\DrinksToProductivity.Tests.csproj", "{0E76D8ED-CF95-4DCE-A65F-BF6B2F98BE1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC2EFD1-AB82-4768-9BA9-E532AA848ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC2EFD1-AB82-4768-9BA9-E532AA848ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC2EFD1-AB82-4768-9BA9-E532AA848ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC2EFD1-AB82-4768-9BA9-E532AA848ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E76D8ED-CF95-4DCE-A65F-BF6B2F98BE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E76D8ED-CF95-4DCE-A65F-BF6B2F98BE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E76D8ED-CF95-4DCE-A65F-BF6B2F98BE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E76D8ED-CF95-4DCE-A65F-BF6B2F98BE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4266526E-D229-475A-A10A-6D76110C7483}
+	EndGlobalSection
+EndGlobal
