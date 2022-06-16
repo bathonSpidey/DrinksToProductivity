@@ -4,10 +4,7 @@ namespace DrinksToProductivity.Tests
     {
 
         [SetUp]
-        public void SetUp()
-        {
-            industry = new Industry() { Name = "Contoso", Productivity = 1.0f };
-        }
+        public void SetUp() => industry = new Industry() { Name = "Contoso", Productivity = 1.0f };
         private Industry industry;
 
         [Test]
@@ -20,19 +17,17 @@ namespace DrinksToProductivity.Tests
         public void AlcoholicDrinkConverterShouldBringInChange()
         {
             var initialProductivity = industry.Productivity;
-            var converter = new DrinkToBusinessConverter(new AlcoholicDrink() { Name = "Wine",AlcoholContentPercentage=12 }, industry);
-            converter.Convert();
+            var converter = new DrinkToBusinessConverter( industry);
+            converter.Convert(new AlcoholicDrink() { Name = "Wine", AlcoholContentPercentage = 12 });
             Assert.That(industry.Productivity, Is.GreaterThan(initialProductivity));
-            Assert.That(industry.Productivity, Is.EqualTo(12));
         }
 
         [Test]
         public void NonAlcoholicDrinkConverterShouldBringInChange()
         {
-            var industry = new Industry() { Name = "Contoso", Productivity = 1.0f };
             var initialProductivity = industry.Productivity;
-            var converter = new DrinkToBusinessConverter(new CafenatedDrink() { Name = "Monster", CaffineContentPercentage = 78 }, industry);
-            converter.Convert();
+            var converter = new DrinkToBusinessConverter(industry);
+            converter.Convert(new CafenatedDrink() { Name = "Monster", CaffineContentPercentage = 78 });
             Assert.That(industry.Productivity, Is.GreaterThan(initialProductivity));
             Assert.That(industry.Productivity, Is.EqualTo(78));
         }
@@ -40,10 +35,9 @@ namespace DrinksToProductivity.Tests
         [Test]
         public void DrinkConverterShouldBringInChange()
         {
-            var industry = new Industry() { Name = "Contoso", Productivity = 1.0f };
             var initialProductivity = industry.Productivity;
-            var converter = new DrinkToBusinessConverter(new Drink() { Name = "SparkleWater", EnergyBooster = 120 }, industry);
-            converter.Convert();
+            var converter = new DrinkToBusinessConverter(industry);
+            converter.Convert(new Drink() { Name = "SparkleWater", EnergyBooster = 120 });
             Assert.That(industry.Productivity, Is.GreaterThan(initialProductivity));
             Assert.That(industry.Productivity, Is.EqualTo(120));
         }

@@ -4,16 +4,11 @@ namespace DrinksToProductivity
 {
     public class DrinkToBusinessConverter
     {
-        public DrinkToBusinessConverter(Beverage beverage,Industry industry)
-        {
-            this.beverage = beverage;
-            this.industry = industry;
-        }
+        public DrinkToBusinessConverter(Industry industry) => this.industry = industry;
 
-        private Beverage beverage { get; set; }
         private Industry industry { get; set; }
 
-        public void Convert()
+        public void Convert(Beverage beverage)
         {
             if (beverage is AlcoholicDrink drink)
                 industry.Productivity = industry.Productivity * drink.AlcoholContentPercentage;
